@@ -1,0 +1,21 @@
+#bg {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  filter: blur(0.3px);
+  z-index: 0;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(
+    circle at 50% 40%,
+    #2a0826 0%,
+    #140510 60%,
+    #0b0208 100%
+  );
+  position: relative;
+  z-index: 1;
+}
