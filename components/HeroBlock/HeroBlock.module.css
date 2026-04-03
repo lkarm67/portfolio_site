@@ -4,83 +4,107 @@
   align-items: center;
   justify-content: center;
 
-  padding: 0 20px;
   position: relative;
-  z-index: 2;
 }
 
-.heroContent {
+.container {
   text-align: center;
   max-width: 800px;
+  padding: 0 20px;
+  z-index: 2;
 }
 
 .tag {
   display: inline-block;
-  padding: 6px 14px;
+  padding: 12px 28px;
   border-radius: 999px;
 
   background: rgba(255, 180, 210, 0.08);
-  border: 1px solid rgba(255, 180, 210, 0.2);
-
+  border: 1px solid rgba(255,255,255,0.1);
+  
   color: #ffb3d1;
-  font-size: 12px;
-  margin-bottom: 20px;
+  font-size: 24px;
+  margin-bottom: 40px;
 }
 
 .hero h1 {
   font-size: 56px;
   line-height: 1.1;
   color: #ffe6f0;
-  margin: 0;
+  margin-bottom: 40px;
 }
 
 .hero h1 span {
-  color: #ff9fc6;
+   background: linear-gradient(135deg, #6a1b6a, #d34681);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .subtitle {
-  margin-top: 16px;
-  font-size: 16px;
-  color: rgba(255, 230, 240, 0.7);
+  margin-top: 8px;
+  font-size: 18px;
+  color: #ffb3d1;
 }
 
+
 .buttons {
-  margin-top: 30px;
+  margin-top: 40px;
   display: flex;
+  flex-wrap: wrap;
   gap: 16px;
   justify-content: center;
 }
 
 .primary {
   padding: 12px 20px;
-  border-radius: 10px;
+  border-radius: 12px;
   border: none;
 
-  background: #ff5c93;
-  color: white;
+  background: linear-gradient(135deg, #431043, #d34681);
+  color: #ffe6f0;
 
   cursor: pointer;
-  transition: 0.2s;
+  transition: 0.3s;
 }
 
 .primary:hover {
   transform: translateY(-2px);
-  background: #ff77a8;
+  box-shadow: 0 10px 30px rgba(211, 70, 129, 0.4);
 }
 
 .secondary {
   padding: 12px 20px;
-  border-radius: 10px;
+  border-radius: 12px;
 
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 180, 210, 0.2);
 
-  color: #ffd1e6;
+  color: #ffe6f0;
   cursor: pointer;
-  transition: 0.2s;
+  transition: 0.3s;
 }
 
 .secondary:hover {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.15);
   transform: translateY(-2px);
 }
+
+/* GLOW BACKGROUND */
+.glow {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(211,70,129,0.3), transparent 70%);
+  top: -100px;
+  left: -100px;
+  filter: blur(60px);
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(30px); }
+  100% { transform: translateY(0px); }
+}
+

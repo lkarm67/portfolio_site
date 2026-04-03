@@ -1,12 +1,20 @@
 "use client";
 
+import Link from "next/link";
 import css from "./HeroBlock.module.css";
+import { motion } from "framer-motion";
 
 export default function HeroBlock() {
   return (
-    <section className={css.hero}>
-      <div className={css.heroContent}>
-        <p className={css.tag}>Frontend Developer</p>
+    <section id="home" className={css.hero}>
+      <motion.div
+        className={css.container}
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
+        
+        <p className={css.tag}>Frontend / Fullstack Developer</p>
 
         <h1>
           Creating modern <span>web experiences</span>
@@ -17,10 +25,16 @@ export default function HeroBlock() {
         </p>
 
         <div className={css.buttons}>
-          <button className={css.primary}>View Projects</button>
-          <button className={css.secondary}>Contact Me</button>
+          <Link href="#projects" className={css.primary}>
+            View Projects
+          </Link>
+          <Link href="#contact" className={css.secondary}>
+            Contact Me
+          </Link>
         </div>
-      </div>
+      </motion.div>
+
+      <div className={css.glow} />
     </section>
   );
 }

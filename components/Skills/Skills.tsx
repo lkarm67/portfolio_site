@@ -48,7 +48,7 @@ const skills = [
 
 export default function Skills() {
   return (
-    <section className={css.skillsSection}>
+    <section id="skills" className={css.skillsSection}>
       <div className={css.marquee}>
         <div className={css.track}>
           {[...skills, ...skills].map((s, i) => {

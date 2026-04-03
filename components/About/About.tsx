@@ -4,7 +4,7 @@ import css from "./About.module.css";
 
 export default function About() {
   return (
-    <section className={css.about}>
+    <section id="about" className={css.about}>
       <div className={css["about-card"]}>
         <h2>About me</h2>
 
