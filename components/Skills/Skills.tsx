@@ -1,6 +1,7 @@
 "use client";
 
 import css from "./Skills.module.css";
+import { TbApi } from "react-icons/tb";
 
 import {
   SiHtml5,
@@ -21,6 +22,7 @@ import {
   SiTrello,
   SiVercel,
   SiNetlify,
+  SiRender,
   SiOpenai,
 } from "react-icons/si";
 
@@ -33,6 +35,7 @@ const skills = [
   { name: "Next.js", icon: SiNextdotjs },
   { name: "React Query", icon: SiReactquery },
   { name: "Axios", icon: SiAxios },
+  { name: "REST API", icon: TbApi },
   { name: "Node.js", icon: SiNodedotjs },
   { name: "Express.js", icon: SiExpress },
   { name: "MongoDB", icon: SiMongodb },
@@ -43,6 +46,7 @@ const skills = [
   { name: "Trello", icon: SiTrello },
   { name: "Vercel", icon: SiVercel },
   { name: "Netlify", icon: SiNetlify },
+  { name: "Render", icon: SiRender },  
   { name: "AI Tools", icon: SiOpenai },
 ];
 

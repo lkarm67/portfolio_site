@@ -32,5 +32,6 @@
 }
 
 .nav a:hover {
-  color: #fff;
+  color: #ffb3d1;
+  transform: translateY(-2px);
 }

@@ -1,51 +1,93 @@
-.about {
-  padding: 120px 20px;
-  display: flex;
-  justify-content: center;
-  position: relative;
-  z-index: 2;
+html {
+  scroll-behavior: smooth;
 }
 
-.about-card {
-  max-width: 800px;
+.about {
+  scroll-margin-top: 200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+  margin: 40px;
+  width: 94.5%;
+  padding: 40px;
+  z-index: 2;
 
-  padding: 30px;
-
-  background: rgba(20, 5, 15, 0.35);
+  background: rgba(20, 5, 15, 0.35); /* напіввишневий */
   backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
 
-  border: 1px solid rgba(255, 180, 210, 0.15);
-  border-radius: 16px;
+  border: 1px solid rgba(255, 210, 230, 0.8);
+  box-shadow: 0 20px 40px rgba(211, 70, 129, 0.3);
+  border-radius: 54px;
+}
 
+.aboutCard {
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
   color: #ffe6f0;
 }
 
-.about-card h2 {
+.aboutCard h2 {
   margin-bottom: 16px;
-  font-size: 28px;
-  color: #ff9fc6;
+  font-size: 44px;
+  color: #ffe6f0;
 }
 
-.about-card p {
+.aboutCard h3 {
+  margin-bottom: 16px;
+  font-size: 36px;
+  color: #ffb3d1;
+}
+
+.name {
+  background: linear-gradient(135deg, #6a1b6a, #d34681);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.tech {
+  font-weight: bold;
+  color: #ffb3d1;
+  margin-right: 8px;
+}
+
+.aboutCard p {
   color: rgba(255, 230, 240, 0.75);
+  font-size: 20px;
   line-height: 1.6;
-  margin-bottom: 12px;
 }
 
-.skills {
+.softSkills {
   margin-top: 16px;
   display: flex;
-  gap: 10px;
+  gap: 20px;
   flex-wrap: wrap;
 }
 
-.skills span {
-  padding: 6px 10px;
+.softSkills span {
+  padding: 12px 20px;
   border-radius: 999px;
 
   background: rgba(255, 92, 147, 0.1);
   border: 1px solid rgba(255, 180, 210, 0.2);
 
-  font-size: 12px;
+  font-size: 18px;
   color: #ffb3d1;
+}
+
+.imgWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: auto;
+}
+
+.imgAbout {
+  border-radius: 40px;
+  object-fit: cover;
 }
