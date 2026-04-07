@@ -10,7 +10,7 @@
 
   padding: 0 40px;
 
-  background: rgba(20, 5, 15, 0.35); /* напіввишневий */
+  background: rgba(20, 5, 15, 1.0); 
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
 

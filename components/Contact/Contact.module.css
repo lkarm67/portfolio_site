@@ -7,7 +7,9 @@ html {
   scroll-margin-top: 0;
   display: flex;
   justify-content: center;
+  margin-bottom: -140px;
 }
+
 
 .contactContainer {
   width: 100%;
@@ -54,8 +56,10 @@ html {
 .inputGroup textarea {
   width: 100%;
   padding: 14px;
-  background: #111;
-  border: 1px solid #ff9fc6;
+  background: rgba(20, 5, 15, 0.35); /* напіввишневий */
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 210, 230, 0.8);
   box-shadow: 0 10px 20px rgba(211, 70, 129, 0.4);
   border-radius: 10px;
   color: #ffe6f0;

@@ -8,9 +8,9 @@ export default function Header() {
     <header className={css.header}>
       <div className={css.logo}>
         <Image
-          src="/images/logo.png"
+          src="/images/logo_header_footer.png"
           alt="Logo"
-          width={80}
+          width={400}
           height={80}
           priority
         />

@@ -34,9 +34,10 @@
   padding: 20px 24px;
   border-radius: 14px;
 
-  background: rgba(20, 5, 15, 0.35);
-  border: 1px solid rgba(255, 180, 210, 0.15);
+  background: rgba(20, 5, 15, 0.35); /* напіввишневий */
   backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 180, 210, 0.65);
 
   color: #ffe6f0;
 
@@ -50,5 +51,6 @@
 
 .skill-card:hover {
   transform: translateY(-3px);
-  border-color: rgba(255, 180, 210, 0.35);
+  border-color: rgba(255, 180, 210, 0.15);
+  box-shadow: #ffd1e6 10px 20px 30px;
 }

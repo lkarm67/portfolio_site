@@ -25,9 +25,16 @@ export default function HeroBlock() {
         </p>
 
         <div className={css.buttons}>
-          <Link href="#projects" className={css.primary}>
+          <button 
+            onClick={() => {
+              document
+                .getElementById("projects")
+                  ?.scrollIntoView({ behavior: "smooth" });
+            }}
+            className={css.primary}
+          >
             View Projects
-          </Link>
+          </button>
           <button
             onClick={() => {
               document

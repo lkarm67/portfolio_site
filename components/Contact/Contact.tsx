@@ -49,22 +49,33 @@ export default function Contact() {
     mode: "onChange",
   });
 
-  const onSubmit = (data: FormData) => {
+  const onSubmit = async (data: FormData) => {
     setLoading(true);
     setSuccess(false);
 
-    setTimeout(() => {
-      console.log(data);
-      setLoading(false);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      if (!res.ok) throw new Error("Failed");
+
       setSuccess(true);
       reset();
 
-      // ⏱ автоховання
       setTimeout(() => {
         setSuccess(false);
       }, 3000);
 
-    }, 1500);
+    } catch (err) {
+      alert("Something went wrong 😢");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
