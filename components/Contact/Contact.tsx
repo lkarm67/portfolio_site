@@ -1,0 +1,147 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
+import css from "./Contact.module.css";
+
+// ===== SCHEMA =====
+const schema = yup.object({
+  name: yup
+    .string()
+    .min(2, "Minimum 2 characters")
+    .required("Name is required"),
+
+  email: yup
+    .string()
+    .email("Invalid email format")
+    .matches(
+      /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/,
+      "Email must include domain (e.g. .com)"
+    )
+    .required("Email is required"),
+
+  message: yup
+    .string()
+    .min(10, "Minimum 10 characters")
+    .required("Message is required"),
+});
+
+type FormData = {
+  name: string;
+  email: string;
+  message: string;
+};
+
+export default function Contact() {
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors, isValid, isSubmitSuccessful },
+  } = useForm<FormData>({
+    resolver: yupResolver(schema),
+    mode: "onChange",
+  });
+
+  const onSubmit = (data: FormData) => {
+    setLoading(true);
+    setSuccess(false);
+
+    setTimeout(() => {
+      console.log(data);
+      setLoading(false);
+      setSuccess(true);
+      reset();
+
+      // ⏱ автоховання
+      setTimeout(() => {
+        setSuccess(false);
+      }, 3000);
+
+    }, 1500);
+  };
+
+  return (
+    <section id="contact" className={css.contactSection}>
+      <motion.div
+        className={css.contactContainer}
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
+        <h2 className={css.title}>Contact Me</h2>
+
+        <div className={css.parWrapper}>
+          <p className={css.subtitle}>
+            Have a project or question?
+          </p>
+          <p className={css.subtitle}>
+            Let&apos;s talk and create something amazing together!
+          </p>
+        </div>
+
+        <form onSubmit={handleSubmit(onSubmit)} className={css.form}>
+          
+          {/* NAME */}
+          <div className={css.inputGroup}>
+            <input
+              {...register("name")}
+              placeholder=" "
+              className={errors.name ? css.inputError : ""}
+            />
+            <label>Name</label>
+            {errors.name && (
+              <span className={css.error}>{errors.name.message}</span>
+            )}
+          </div>
+
+          {/* EMAIL */}
+          <div className={css.inputGroup}>
+            <input
+              {...register("email")}
+              placeholder=" "
+              className={errors.email ? css.inputError : ""}
+            />
+            <label>Email</label>
+            {errors.email && (
+              <span className={css.error}>{errors.email.message}</span>
+            )}
+          </div>
+
+          {/* MESSAGE */}
+          <div className={css.inputGroup}>
+            <textarea
+              rows={4}
+              {...register("message")}
+              placeholder=" "
+              className={errors.message ? css.inputError : ""}
+            />
+            <label>Message</label>
+            {errors.message && (
+              <span className={css.error}>{errors.message.message}</span>
+            )}
+          </div>
+
+          <button
+            type="submit"
+            disabled={!isValid || loading}
+            className={css.button}
+          >
+            {loading ? "Sending..." : "Send Message"}
+          </button>
+        </form>
+
+        {success && (
+          <p className={css.success}>Message sent 🚀</p>
+        )}
+      </motion.div>
+    </section>
+  );
+}

@@ -1,160 +1,6 @@
-/*.projectsSection {
-  padding: 180px 80px;
-}
-
-.title {
-  font-size: 44px;
-  margin-bottom: 40px;
-  color: #ffe6f0;
-}
-
-/* GRID 
-
-.projectsGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-}
-
-/* WRAPPER 
-
-.cardWrapper {
-  perspective: 1200px;
-}
-
-/* CARD 
-
-.card {
-  height: 380px;
-  transition: transform 0.2s ease;
-  transform-style: preserve-3d;
-}
-
-/* INNER (flip) 
-
-.cardInner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-}
-
-.card:hover .cardInner {
-  transform: rotateY(180deg);
-}
-
-/* FRONT & BACK 
-
-.cardFront,
-.cardBack {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 20px;
-  overflow: hidden;
-  backface-visibility: hidden;
-}
-
-/* FRONT
-
-.cardFront {
-  background: #111;
-}
-
-.cardFront img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-
-.glow {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-}
-
-.content {
-  position: relative;
-  z-index: 1;
-  padding: 20px;
-}
-
-.content h3 {
-  color: #ffe6f0;
-}
-
-.content p {
-  font-size: 14px;
-  opacity: 0.7;
-  margin: 10px 0;
-  color: #ffe6f0;
-}
-
-/* BACK 
-
-.cardBack {
-  transform: rotateY(180deg);
-  background: linear-gradient(135deg, #111, #1a0a1a);
-  color: #ffe6f0;
-
-  padding: 20px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 12px;
-}
-
-/* TECH 
-
-.tech {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-}
-
-.tech span {
-  padding: 4px 8px;
-  border-radius: 6px;
-  font-size: 11px;
-  background: rgba(255, 92, 147, 0.1);
-  color: #ffb3d1;
-}
-
-/* LINKS 
-
-.links {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.links a {
-  padding: 8px 12px;
-  background: #d34681;
-  border-radius: 8px;
-  color: white;
-  text-decoration: none;
-  font-size: 13px;
-  transition: 0.3s;
-  cursor: pointer;
-}
-
-.links a:hover {
-  background: linear-gradient(135deg, #431043, #d34681);
-}*/
-
-
-
-
-
-
 html {
   scroll-behavior: smooth;
 }
-
 
 .projectsSection {
   padding: 180px 80px;
@@ -180,11 +26,13 @@ html {
   overflow: hidden;
   transition: 0.4s;
   position: relative;
+  border: 1px solid rgba(255, 180, 210, 0.2);
 }
 
 .card:hover {
   transform: translateY(-10px);
   box-shadow: 0 20px 40px rgba(211, 70, 129, 0.3);
+  border: 1px solid rgba(255, 210, 230, 0.8);
 }
 
 /* IMAGE */

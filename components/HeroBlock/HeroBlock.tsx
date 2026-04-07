@@ -28,9 +28,16 @@ export default function HeroBlock() {
           <Link href="#projects" className={css.primary}>
             View Projects
           </Link>
-          <Link href="#contact" className={css.secondary}>
-            Contact Me
-          </Link>
+          <button
+            onClick={() => {
+              document
+                .getElementById("contact")
+                  ?.scrollIntoView({ behavior: "smooth" });
+            }}  
+            className={css.secondary}
+          >
+  Contact me
+</button>
         </div>
       </motion.div>
 
