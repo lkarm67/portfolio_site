@@ -13,7 +13,7 @@
 
 .overlay.show {
   opacity: 1;
-  pointer-events: all;
+  pointer-events: auto;
 }
 
 html.noScroll,
@@ -27,17 +27,18 @@ body.noScroll {
 .mobileMenu {
   position: fixed;
   top: 0;
-  right: -100%;
-  width: 100%;
+  right: 0;
+  width: 80%;
   max-width: 320px;
-  height: 100%;
-  padding: 72px 20px 24px;
+  height: 100vh;
+  padding: 24px 20px;
 
   background: rgba(20, 20, 20, 0.7);
   backdrop-filter: blur(12px);
   box-shadow: -10px 0 30px rgba(0, 0, 0, 0.4);
 
-  transition: right 0.35s ease;
+  transform: translateX(100%);
+  transition: transform 0.35s ease;
   z-index: 1000;
 
   display: flex;
@@ -50,7 +51,14 @@ body.noScroll {
 }
 
 .mobileMenu.open {
-  right: 0;
+  transform: translateX(0);
+}
+
+/* ===== LOGO ===== */
+.logo {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 /* ===== CLOSE BUTTON ===== */
@@ -76,17 +84,19 @@ body.noScroll {
 .mobileNav {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  margin-bottom: 40px;
-  margin-top: 20px;
+  gap: 20px;
+  margin-top: 240px;
+  width: 100%;
+  align-items: center;
 }
 
-/* ===== LINKS ===== */
-.mobileNav a {
+.mobileNav button {
   font-size: 18px;
   font-weight: 500;
   color: white;
-  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
   padding: 8px 0;
   display: inline-block;
 
@@ -97,18 +107,18 @@ body.noScroll {
   transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
-.mobileMenu.open .mobileNav a {
+.mobileMenu.open .mobileNav button {
   opacity: 1;
   transform: translateX(0);
 }
 
-.mobileMenu.open .mobileNav a:nth-child(1) { transition-delay: 0.1s; }
-.mobileMenu.open .mobileNav a:nth-child(2) { transition-delay: 0.2s; }
-.mobileMenu.open .mobileNav a:nth-child(3) { transition-delay: 0.3s; }
-.mobileMenu.open .mobileNav a:nth-child(4) { transition-delay: 0.4s; }
+.mobileMenu.open .mobileNav button:nth-child(1) { transition-delay: 0.1s; }
+.mobileMenu.open .mobileNav button:nth-child(2) { transition-delay: 0.2s; }
+.mobileMenu.open .mobileNav button:nth-child(3) { transition-delay: 0.3s; }
+.mobileMenu.open .mobileNav button:nth-child(4) { transition-delay: 0.4s; }
 
 /* underline animation */
-.mobileNav a::after {
+.mobileNav button::after {
   content: "";
   position: absolute;
   left: 0;
@@ -119,96 +129,21 @@ body.noScroll {
   transition: width 0.3s ease;
 }
 
-.mobileNav a:hover::after {
+.mobileNav button:hover::after {
   width: 100%;
 }
 
-.mobileNav a:hover {
+.mobileNav button:hover {
   color: #ff5fa2;
 }
 
-/* ===== SOCIAL ===== */
-
-.socialList {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 14px;
-  margin-bottom: 20px;
-  padding: 0;
-  list-style: none;
-}
-
-.item {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #431043, #d34681);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-  position: relative;
+.noScroll {
   overflow: hidden;
 }
 
-.item:hover {
-  transform: translateY(-4px) scale(1.1);
-  box-shadow: 0 12px 30px rgba(211, 70, 129, 0.35);
-}
-
-.item::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.2);
-  transform: scale(0);
-  transition: transform 0.4s ease;
-}
-
-.item:hover::after {
-  transform: scale(1.8);
-  opacity: 0;
-}
-
-.link {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-}
-
-.icon {
-  fill: #f4f4fd;
-  transition: transform 0.3s ease, fill 0.25s ease;
-}
-
-.item:hover .icon {
-  fill: #ffffff;
-  transform: scale(1.15) rotate(6deg);
-}
-
 @media (min-width: 375px) {
-  .mobileMenu {
-    padding: 80px 20px 30px;
-  }
-
-  .mobileNav a {
+  .mobileNav button {
     font-size: 20px;
-  }
-}
-
-@media (min-width: 425px) {
-  .mobileMenu {
-    padding: 90px 24px 32px;
-  }
-
-  .item {
-    min-width: 44px;
-    min-height: 44px;
   }
 }
 
@@ -217,7 +152,7 @@ body.noScroll {
     max-width: 360px;
   }
 
-  .mobileNav a {
+  .mobileNav button {
     font-size: 22px;
   }
 }
@@ -231,3 +166,5 @@ body.noScroll {
     display: none;
   }
 }
+
+
