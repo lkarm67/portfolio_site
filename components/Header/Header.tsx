@@ -2,16 +2,30 @@
 
 import css from "./Header.module.css";
 import Image from "next/image";
+import { useState } from "react";
+import MobileMenu from "../MobileMenu/MobileMenu";
 
 export default function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <header className={css.header}>
       <div className={css.logo}>
         <Image
-          src="/images/logo_header_footer.png"
+          src="/images/logo_header.png"
           alt="Logo"
-          width={400}
+          width={500}
+          height={100}
+          className={css.logoDesktop}
+          priority
+        />
+
+        <Image
+          src="/images/logo_mobile.png"
+          alt="Logo"
+          width={80}
           height={80}
+          className={css.logoMobile}
           priority
         />
       </div>
@@ -22,6 +36,19 @@ export default function Header() {
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
       </nav>
+
+      <button
+        className={css.burgerBtn}
+        onClick={() => setIsMenuOpen(true)}
+        aria-label="Open menu"
+      >
+        ☰
+      </button>
+
+      <MobileMenu
+        isOpen={isMenuOpen}
+        onClose={() => setIsMenuOpen(false)}
+      />
     </header>
   );
 }

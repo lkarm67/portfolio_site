@@ -1,13 +1,15 @@
 .header {
   position: fixed;
-  margin: 40px;
-  width: 94.5%;
+  top: 12px;
+  left: 12px;
+  right: 12px;
   z-index: 10;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
 
+  /*padding: 0 40px;*/
   padding: 0 40px;
 
   background: rgba(20, 5, 15, 1.0); 
@@ -16,7 +18,17 @@
 
   border: 1px solid rgba(255, 210, 230, 0.8);
   box-shadow: #ffd1e6 0px 4px 30px;
-  border-radius: 54px;
+  border-radius: 44px;
+}
+
+.logoDesktop {
+  display: none;
+}
+
+.logoMobile {
+  display: block;
+  width: 70px;
+  height: auto;
 }
 
 .nav {
@@ -24,7 +36,46 @@
   gap: 24px;
 }
 
-.nav a {
+.nav {
+  display: none;
+}
+
+.burgerBtn {
+  font-size: 26px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: white;
+
+  transition: transform 0.2s ease;
+}
+
+.burgerBtn:hover {
+  transform: scale(1.1);
+}
+
+@media (min-width: 768px) {
+  .header {
+    padding: 0 40px;
+    border-radius: 54px;
+  }
+
+  .logoMobile {
+    display: none;
+  }
+
+  .logoDesktop {
+    display: block;
+    width: 350px;
+    height: auto;
+  }
+
+  .nav {
+    display: flex;
+    gap: 20px;
+  }
+
+  .nav a {
   color: #ffe6f0;
   text-decoration: none;
   font-size: 18px;
@@ -34,4 +85,19 @@
 .nav a:hover {
   color: #ffb3d1;
   transform: translateY(-2px);
+}
+
+  .burgerBtn {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .logoDesktop {
+    width: 400px;
+  }
+  
+  .nav a {
+    font-size: 20px;
+  }
 }
