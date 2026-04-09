@@ -58,7 +58,7 @@ body.noScroll {
 .logo {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 20px;
 }
 
 /* ===== CLOSE BUTTON ===== */
@@ -125,7 +125,7 @@ body.noScroll {
   bottom: -6px;
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, #ff5fa2, #9f5fff);
+  background: linear-gradient(90deg, #4c2755, #d66ec3);
   transition: width 0.3s ease;
 }
 
@@ -134,7 +134,7 @@ body.noScroll {
 }
 
 .mobileNav button:hover {
-  color: #ff5fa2;
+  color: #d66ec3;
 }
 
 .noScroll {

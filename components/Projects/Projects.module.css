@@ -1,9 +1,198 @@
-html {
-  scroll-behavior: smooth;
+.projectsSection {
+  padding:  16px;
+  scroll-margin-top: 0px;
 }
 
-.projectsSection {
-  padding: 180px 80px;
+/* ===== TITLE ===== */
+.title {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 24px;
+  color: #ffe6f0;
+}
+
+/* ===== GRID ===== */
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+}
+
+/* ===== CARD ===== */
+.card {
+  background: rgba(20, 5, 15, 0.35);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: 0.4s;
+  border: 1px solid rgba(255, 180, 210, 0.2);
+}
+
+/* ===== IMAGE ===== */
+.imageWrapper {
+  position: relative;
+}
+
+.imageWrapper img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* ===== OVERLAY (mobile → always visible buttons) ===== */
+.overlay {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+
+  opacity: 1; /* ВАЖЛИВО */
+}
+
+.overlay a {
+  padding: 8px 12px;
+  background: #d66ec3;
+  color: white;
+  border-radius: 8px;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+/* ===== CONTENT ===== */
+.content {
+  padding: 16px;
+}
+
+.content h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #ffe6f0;
+}
+
+.content p {
+  font-size: 14px;
+  margin-bottom: 15px;
+  color: rgba(255, 230, 240, 0.75);
+}
+
+.span {
+  font-weight: bold;
+  color: #ffb3d1;
+}
+
+/* ===== TECH ===== */
+.tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tech span {
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 8px;
+  background: rgba(255, 92, 147, 0.1);
+  border: 1px solid rgba(255, 180, 210, 0.2);
+  color: #ffb3d1;
+}
+
+/* ========================= */
+/* ===== TABLET (768px) ===== */
+/* ========================= */
+
+@media (min-width: 768px) {
+  .projectsSection {
+    padding: 110px 32px;
+  }
+
+  .title {
+    font-size: 36px;
+  }
+
+  .projectsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .content h3 {
+    font-size: 20px;
+  }
+}
+
+/* ========================= */
+/* ===== DESKTOP (1180px) ===== */
+/* ========================= */
+
+@media (min-width: 1180px) {
+  .projectsSection {
+    padding: 120px 80px;
+  }
+
+  .title {
+    font-size: 44px;
+    text-align: left;
+  }
+
+  .projectsGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .imageWrapper img {
+    height: 200px;
+  }
+
+  /* hover ефекти тільки для desktop */
+  @media (hover: hover) {
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(211, 70, 129, 0.3);
+      border: 1px solid rgba(255, 210, 230, 0.8);
+    }
+
+    .overlay {
+      inset: 0;
+      background: rgba(0, 0, 0, 0.6);
+      align-items: center;
+      opacity: 0;
+    }
+
+    .card:hover .overlay {
+      opacity: 1;
+      transform: scale(1.12);
+    }
+
+    .overlay a:hover {
+      background: linear-gradient(135deg, #4c2755, #d66ec3);
+      transform: translateY(-2px);
+      transition: 0.3s;
+   }
+
+    .imageWrapper img {
+      transition: 0.5s;
+    }
+
+    .card:hover img {
+      transform: scale(1.12);
+    }
+  }
+}
+
+
+/* ========================= */
+/* ===== DESKTOP (1350px) ===== */
+/* ========================= */
+@media (min-width: 1350px) {
+  .projectsGrid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+}
+/*.projectsSection {
+  padding: 140px 80px;
   scroll-margin-top: 0;
 }
 
@@ -21,7 +210,7 @@ html {
 }
 
 .card {
-  background: rgba(20, 5, 15, 0.35); /* напіввишневий */
+  background: rgba(20, 5, 15, 0.35); /* напіввишневий 
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border-radius: 20px;
@@ -37,7 +226,7 @@ html {
   border: 1px solid rgba(255, 210, 230, 0.8);
 }
 
-/* IMAGE */
+/* IMAGE 
 
 .imageWrapper {
   position: relative;
@@ -55,7 +244,7 @@ html {
   transform: scale(1.1);
 }
 
-/* OVERLAY*/
+/* OVERLAY
 
 .overlay {
   position: absolute;
@@ -75,7 +264,7 @@ html {
 
 .overlay a {
   padding: 10px 16px;
-  background: #d34681;
+  background: #d66ec3;
   color: white;
   border-radius: 10px;
   text-decoration: none;
@@ -84,12 +273,12 @@ html {
 }
 
 .overlay a:hover {
-  background: linear-gradient(135deg, #431043, #d34681);
+  background: linear-gradient(135deg, #4c2755, #d66ec3);
   transform: translateY(-2px);
   transition: 0.3s;
 }
 
-/* CONTENT*/
+/* CONTENT
 
 .content {
   padding: 20px;
@@ -125,4 +314,4 @@ html {
   background: rgba(255, 92, 147, 0.1);
   border: 1px solid rgba(255, 180, 210, 0.2);
   color: #ffb3d1;
-}
+}*/

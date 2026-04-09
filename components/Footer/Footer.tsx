@@ -18,12 +18,10 @@ export default function Footer() {
         <ul className={css.socialList}>
           {[
             { href: "https://www.instagram.com/frontend_fullstack_developer/", icon: "icon-instagram" },
-            { href: "https://www.facebook.com/profile.php?id=100007795920929", icon: "icon-facebook" },
             { href: "https://wa.me/380971647012", icon: "icon-whatsapp" },
             { href: "https://t.me/lkarm67", icon: "icon-telegram" },
             { href: "https://www.linkedin.com/in/liudmyla-karmeliuk-full-stack/", icon: "icon-linkedin" },
             { href: "https://github.com/lkarm67", icon: "icon-github" },
-            { href: "mailto:fsdkl04@gmail.com", icon: "icon-mail" },
           ].map((item) => (
             <li key={item.icon} className={css.item}>
               <a

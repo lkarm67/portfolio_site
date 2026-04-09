@@ -1,4 +1,109 @@
 .skillsSection {
+  padding: 16px 0;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+}
+
+/* ===== MARQUEE ===== */
+.marquee {
+  overflow: hidden;
+  width: 100%;
+}
+
+.track {
+  display: flex;
+  gap: 12px;
+  width: max-content;
+  animation: scroll 40s linear infinite;
+}
+
+/* ===== MOBILE CARD (320px) ===== */
+.skill-card {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  padding: 10px 14px;
+  border-radius: 10px;
+
+  font-size: 12px;
+
+  background: rgba(20, 5, 15, 0.35);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 180, 210, 0.5);
+
+  color: #ffe6f0;
+  white-space: nowrap;
+  transition: 0.2s ease;
+}
+
+.skill-card svg {
+  width: 18px;
+  height: 18px;
+  color: #ff9fc6;
+}
+
+/* ===== TABLET (≥768px) ===== */
+@media (min-width: 768px) {
+  .track {
+    gap: 16px;
+    animation: scroll 50s linear infinite;
+  }
+
+  .skill-card {
+    padding: 14px 18px;
+    font-size: 14px;
+    border-radius: 12px;
+  }
+
+  .skill-card svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+/* ===== DESKTOP (≥1024px) ===== */
+@media (min-width: 1024px) {
+  .track {
+    gap: 20px;
+    animation: scroll 60s linear infinite;
+  }
+
+  .skill-card {
+    padding: 20px 24px;
+    font-size: 16px;
+    border-radius: 14px;
+  }
+
+  .skill-card svg {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+/* ===== HOVER тільки для desktop ===== */
+@media (hover: hover) {
+  .skill-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(255, 180, 210, 0.2);
+    box-shadow: #ffd1e6 10px 20px 30px;
+  }
+}
+
+/* ===== ANIMATION ===== */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+
+/*.skillsSection {
   padding: 20px 0;
   overflow: hidden;
   position: relative;
@@ -34,7 +139,7 @@
   padding: 20px 24px;
   border-radius: 14px;
 
-  background: rgba(20, 5, 15, 0.35); /* напіввишневий */
+  background: rgba(20, 5, 15, 0.35); /* напіввишневий 
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border: 1px solid rgba(255, 180, 210, 0.65);
@@ -53,4 +158,4 @@
   transform: translateY(-3px);
   border-color: rgba(255, 180, 210, 0.15);
   box-shadow: #ffd1e6 10px 20px 30px;
-}
+}*/

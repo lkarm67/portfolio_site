@@ -1,9 +1,173 @@
-html {
-  scroll-behavior: smooth;
+.about {
+  scroll-margin-top: 80px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  width: 100%;
+  max-width: 1440px;
+  padding: 16px;
+}
+  
+.aboutCard {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #ffe6f0;
 }
 
-.about {
-  scroll-margin-top: 200px;
+.aboutCard h2 {
+  font-size: 28px;
+  margin-bottom: 24px;
+}
+
+.aboutCard h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.name {
+  background: linear-gradient(135deg, #bc45bc, #ffb3d1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.aboutCard p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(255, 230, 240, 0.75);
+}
+
+.tech {
+  font-weight: bold;
+  color: #ffb3d1;
+  margin-right: 8px;
+}
+
+.softSkills {
+  margin-top: 12px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.softSkills span {
+  padding: 6px 10px;
+  font-size: 12px;
+  border-radius: 999px;
+
+  background: rgba(255, 92, 147, 0.1);
+  border: 1px solid rgba(255, 180, 210, 0.2);
+  color: #ffb3d1;
+}
+
+.imgWrapper {
+  margin-top: 16px;
+}
+
+.imgAbout {
+  width: 260px;
+  height: auto;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+@media (min-width: 480px) {
+  .about {
+    padding: 20px;
+  }
+
+  .aboutCard h2 {
+    font-size: 28px;
+    margin-bottom: 12px;
+  }
+
+  .aboutCard h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+
+  .aboutCard p {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 768px) {
+  .about {
+    padding: 30px;
+  }
+
+  .aboutCard h2 {
+    font-size: 36px;
+    margin-bottom: 18px;
+  }
+
+  .aboutCard h3 {
+    font-size: 26px;
+    margin-bottom: 18px;
+  }
+
+  .aboutCard p {
+    font-size: 18px;
+  }
+
+  .softSkills span {
+    font-size: 14px;
+    padding: 8px 14px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .about {
+    scroll-margin-top: 60px;
+
+    max-width: 1440px;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    padding: 80px;
+    border-radius: 54px;
+  }
+
+  .aboutCard {
+    max-width: 900px;
+  }
+
+  .aboutCard h2 {
+    font-size: 44px;
+    margin-bottom: 24px;
+  }
+
+  .aboutCard h3 {
+    font-size: 36px;
+    margin-bottom: 24px;
+
+  }
+
+  .softSkills {
+    justify-content: flex-start;
+    margin-top: 28px;
+  }
+
+  .imgWrapper {
+    margin-top: 0;
+  }
+
+  .imgAbout {
+    width: 300px;
+  }
+}
+
+
+
+
+
+/*.about {
+  scroll-margin-top: 160px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -13,7 +177,7 @@ html {
   padding: 40px;
   z-index: 2;
 
-  background: rgba(20, 5, 15, 0.35); /* напіввишневий */
+  background: rgba(20, 5, 15, 0.35); /* напіввишневий 
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
 
@@ -90,4 +254,4 @@ html {
 .imgAbout {
   border-radius: 40px;
   object-fit: cover;
-}
+}*/

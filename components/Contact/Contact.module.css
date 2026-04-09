@@ -1,15 +1,8 @@
-html {
-  scroll-behavior: smooth;
-}
-
 .contactSection {
-  padding: 180px 80px;
-  scroll-margin-top: 0;
+  padding:  80px 16px;
   display: flex;
   justify-content: center;
-  margin-bottom: -140px;
 }
-
 
 .contactContainer {
   width: 100%;
@@ -18,8 +11,8 @@ html {
 
 .title {
   text-align: center;
-  font-size: 44px;
-  margin-bottom: 40px;
+  font-size: 28px;
+  margin-bottom: 24px;
   color: #ffe6f0;
 }
 
@@ -28,14 +21,14 @@ html {
   flex-direction: column;
   gap: 10px;
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 24px;
 }
 
 .subtitle {
   text-align: center;
   opacity: 0.7;
   color: rgba(255, 230, 240, 0.75);
-  font-size: 22px;
+  font-size: 18px;
 }
 
 /* FORM */
@@ -134,9 +127,9 @@ html {
 
 .button {
   padding: 14px;
-  border: 1px solid #ff9fc6;
+  border: 1px solid #d66ec3;
   border-radius: 12px;
-  background: linear-gradient(135deg, #5a1a5a, #ff5fa2);
+  background: linear-gradient(135deg, #4c2755, #d66ec3);
   color: #fff !important;
   text-shadow: 0 0 8px rgba(255, 159, 198, 0.4);
   font-size: 18px;
@@ -146,7 +139,7 @@ html {
 
 .button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(211, 70, 129, 0.4);
+  box-shadow: 0 10px 20px rgba(215, 126, 215, 0.4);
 }
 
 .button:active {
@@ -154,9 +147,9 @@ html {
 }
 
 .button:disabled {
-  background: linear-gradient(135deg, #3a0f3a, #7a2a55);
+  background: linear-gradient(135deg, #682068, #76405d);
   color: #fff;
-  opacity: 0.5;
+  opacity: 0.7;
   cursor: not-allowed;
   box-shadow: none;
 }
@@ -167,4 +160,60 @@ html {
   margin-top: 20px;
   text-align: center;
   color: #d34681;
+}
+
+@media (min-width: 768px) {
+  .contactSection {
+    padding: 100px 40px;
+  }
+
+  .contactContainer {
+    max-width: 500px;
+  }
+
+  .title {
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+
+  .subtitle {
+    font-size: 20px;
+  }
+
+  .form {
+    gap: 18px;
+  }
+
+  .inputGroup input,
+  .inputGroup textarea {
+    padding: 14px;
+    font-size: 15px;
+  }
+
+  .button {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .contactSection {
+    padding: 110px 40px;
+  }
+
+  .title {
+    font-size: 44px;
+    margin-bottom: 40px;
+  }
+
+  .subtitle {
+    font-size: 22px;
+  }
+
+  .form {
+    gap: 20px;
+  }
+
+  .button {
+    font-size: 18px;
+  }
 }

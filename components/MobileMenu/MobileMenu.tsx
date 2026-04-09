@@ -85,8 +85,8 @@ export default function MobileMenu({ isOpen, onClose }: Props) {
           <Image
             src="/images/logo_mobile.png"
             alt="Logo"
-            width={80}
-            height={80}
+            width={70}
+            height={70}
             className={css.logo}
             priority
           />
