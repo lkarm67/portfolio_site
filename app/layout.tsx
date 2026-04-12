@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 
   openGraph: {
     title: "Liudmyla Karmeliuk | Frontend / Fullstack Developer",
-    description: "Frontend / Fullstack developer portfolio",
+    description: "Frontend and Fullstack developer specializing in modern web applications using React, Next.js, and scalable technologies. View my projects and experience.",
     siteName: "Portfolio",
     images: [
       {
