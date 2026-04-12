@@ -38,7 +38,11 @@ export default function Footer() {
           ))}
         </ul>
            
-        <p className={css.text}>Built with Next.js & love 🚀</p>
+        <p className={css.text}>
+          Developer: Liudmyla Karmeliuk | 
+            <a href="mailto:fsdkl04@gmail.com"> Email</a> | 
+            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer"> Resume</a>
+        </p>
 
         <p className={css.copy}>© {year} All rights reserved.</p>
       </motion.div>

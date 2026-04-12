@@ -25,16 +25,23 @@ export default function HeroBlock() {
         </p>
 
         <div className={css.buttons}>
-          <button 
-            onClick={() => {
-              document
-                .getElementById("projects")
-                  ?.scrollIntoView({ behavior: "smooth" });
-            }}
+          <a
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open resume PDF"
             className={css.primary}
           >
-            View Projects
-          </button>
+            <svg
+              className={css.icon}
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+            >
+              <use href={`/icons.svg#icon-file-text2`} />
+            </svg>
+            View Resume
+          </a>
           <button
             onClick={() => {
               document
@@ -43,8 +50,8 @@ export default function HeroBlock() {
             }}  
             className={css.secondary}
           >
-  Contact me
-</button>
+            Contact me
+          </button>
         </div>
       </motion.div>
 
