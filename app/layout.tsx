@@ -42,8 +42,8 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Liudmyla Karmeliuk | Frontend Developer",
-    description: "Frontend developer portfolio",
+    title: "Liudmyla Karmeliuk | Frontend / Fullstack Developer",
+    description: "Frontend and Fullstack developer specializing in modern web applications using React, Next.js, and scalable technologies. View my projects and experience.",
     images: [
       "https://res.cloudinary.com/dvrha1ntw/image/upload/v1775963781/portfolio_yuqvsj.png"
     ],
