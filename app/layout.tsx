@@ -15,9 +15,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL!),
-  
+export const metadata: Metadata = {  
   title: "Liudmyla Karmeliuk | Frontend / Fullstack Developer",
   description: "Portfolio website of frontend / fullstack developer",
   icons: {
@@ -30,11 +28,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Liudmyla Karmeliuk | Frontend / Fullstack Developer",
     description: "Frontend / Fullstack developer portfolio",
-    url: process.env.NEXT_PUBLIC_SITE_URL,
     siteName: "Portfolio",
     images: [
       {
-        url: `${process.env.NEXT_PUBLIC_SITE_URL}/image/portfolio_og.png`,
+        url: "https://res.cloudinary.com/dvrha1ntw/image/upload/v1775963781/portfolio_yuqvsj.png",
         width: 1200,
         height: 630,
       },
@@ -47,7 +44,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Liudmyla Karmeliuk | Frontend Developer",
     description: "Frontend developer portfolio",
-    images: [`${process.env.NEXT_PUBLIC_SITE_URL}/image/portfolio_og.png`],
+    images: [
+      "https://res.cloudinary.com/dvrha1ntw/image/upload/v1775963781/portfolio_yuqvsj.png"
+    ],
   },
 };
 
