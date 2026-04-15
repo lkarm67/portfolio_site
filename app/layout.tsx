@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Background from "@/components/Background/Background";
 import css from "./layout.module.css";
+import { LanguageProvider } from "@/context/LanguageContext";
 
 
 const geistSans = Geist({
@@ -59,9 +60,11 @@ export default function RootLayout({
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
       <body>
         <Background />
-        <main className={css.main}>
-          {children}
-        </main>
+        <LanguageProvider>          
+          <main className={css.main}>
+            {children}
+          </main>
+        </LanguageProvider>
       </body>
     </html>
   );

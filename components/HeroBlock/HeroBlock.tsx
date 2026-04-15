@@ -3,8 +3,14 @@
 import Link from "next/link";
 import css from "./HeroBlock.module.css";
 import { motion } from "framer-motion";
+import en from "../../locales/en.json";
+import uk from "../../locales/uk.json";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function HeroBlock() {
+  const { lang } = useLanguage();
+  const t = lang === "en" ? en : uk;
+
   return (
     <section id="home" className={css.hero}>
       <motion.div
@@ -14,14 +20,14 @@ export default function HeroBlock() {
         transition={{ duration: 0.8 }}
       >
         
-        <p className={css.tag}>Frontend / Fullstack Developer</p>
+        <p className={css.tag}>{t.home.tag}</p>
 
         <h1>
-          Creating modern <span>web experiences</span>
+          {t.home.titlePart1} <span>{t.home.titleHighlight}</span>
         </h1>
 
         <p className={css.subtitle}>
-          I build clean, fast and aesthetic interfaces with React & Next.js.
+          {t.home.subtitle}
         </p>
 
         <div className={css.buttons}>
@@ -40,7 +46,7 @@ export default function HeroBlock() {
             >
               <use href={`/icons.svg#icon-file-text2`} />
             </svg>
-            View Resume
+            {t.home.primaryBtn}
           </a>
           <button
             onClick={() => {
@@ -50,7 +56,7 @@ export default function HeroBlock() {
             }}  
             className={css.secondary}
           >
-            Contact me
+            {t.home.secondaryBtn}
           </button>
         </div>
       </motion.div>

@@ -2,37 +2,46 @@
 
 import Image from "next/image";
 import css from "./About.module.css";
+import en from "../../locales/en.json";
+import uk from "../../locales/uk.json";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function About() {
+  const { lang } = useLanguage();
+  const t = lang === "en" ? en : uk;
+
   return (
     <section id="about" className={css.about}>
       <div className={css.aboutCard}>
         
-        <h2>About me</h2>
+        <h2>{t.about.title}</h2>
 
         <h3>
-          I'm<span className={css.name}> Liudmyla Karmeliuk</span> - a frontend / fullstack developer.
+          {t.about.nameIntro}{" "}
+          <span className={css.name}>{t.about.name}</span> - {t.about.role}
         </h3>
         
-        <p>I create modern and user-friendly web interfaces.</p>
+        <p>{t.about.description}</p>
         <p>
-          <span className={css.tech}>Frontend: </span>HTML5, CSS3, JavaScript, React, Next.js, TypeScript
+          <span className={css.tech}>{t.about.frontendLabel}: </span>
+          {t.about.frontendStack}
         </p>
         <p>
-          <span className={css.tech}>Fullstack: </span>Node.js, Express.js, MongoDB, Firebase, RESTful APIs  
+          <span className={css.tech}>{t.about.fullstackLabel}: </span>
+          {t.about.fullstackStack}
         </p>
         <p>
-          I love clean UI, smooth animations and building projects that feel
-          alive and premium.
+          {t.about.extra}
         </p>
 
         <div className={css.softSkills}>
-          <span>Problem-solving</span>
-          <span>Team collaboration</span>
-          <span>Communication</span>
-          <span>Attention to detail</span>
+          <span>{t.about.skills["1"]}</span>
+          <span>{t.about.skills["2"]}</span>
+          <span>{t.about.skills["3"]}</span>
+          <span>{t.about.skills["4"]}</span>
         </div>
       </div>
+      
       <div className={css.imgWrapper}>
         <Image 
           src="/images/about.jpg"

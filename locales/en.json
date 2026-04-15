@@ -1,0 +1,82 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "home": {
+    "tag": "Frontend / Fullstack Developer",
+    "titlePart1": "Creating modern",
+    "titleHighlight": "web experiences",
+    "subtitle": "I build clean, fast and aesthetic interfaces with React & Next.js.",
+    "primaryBtn": "View Resume",
+    "secondaryBtn": "Contact Me"
+  },
+  "about": {
+    "title": "About Me",
+    "nameIntro": "I'm",
+    "name": "Liudmyla Karmeliuk",
+    "role": "a frontend / fullstack developer.",
+    "description": "I create modern and user-friendly web interfaces.",
+    "frontendLabel": "Frontend:",
+    "frontendStack": "HTML5, CSS3, JavaScript, React, Next.js, TypeScript",
+    "fullstackLabel": "Fullstack:",
+    "fullstackStack": "Node.js, Express.js, MongoDB, Firebase, RESTful APIs",
+    "extra": "I love clean UI, smooth animations and building projects that feel alive and premium.",
+    "skills": {
+      "1": "Problem-solving",
+      "2": "Team collaboration",
+      "3": "Communication",
+      "4": "Attention to detail"
+    }
+  },
+  "projects": {
+    "title": "Projects",
+    "type": "Type",
+    "individual": "Individual",
+    "team": "Team",
+    "role": "Role",
+    "live": "Live",
+    "github": "GitHub",
+    "items": {
+      "nanny": "SPA for finding and booking babysitters with authentication and scheduling.",
+      "traveltrucks": "Camper rental platform with catalog, filtering, booking and reviews.",
+      "toolnext": "Full-stack platform for renting and booking tools with authentication and reviews.",
+      "notehub": "Simple and clean app for managing personal notes.",
+      "mebleria": "Responsive furniture store website with product catalog and pagination.",
+      "webstudio": "Responsive business website with modern layout and interactive elements.",
+      "watchcharm": "Landing page for a premium watch brand with modern UI and smooth interactions."
+    }
+  },
+  "contact": {
+    "title": "Contact Me",
+    "subtitle1": "Have a project or question?",
+    "subtitle2": "Let's talk and create something amazing together!",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "button": {
+        "send": "Send Message",
+        "sending": "Sending..."
+      },
+      "success": "Message sent 🚀"
+    },
+    "errors": {
+      "nameRequired": "Name is required",
+      "nameMin": "Minimum 2 characters",
+      "emailRequired": "Email is required",
+      "emailInvalid": "Invalid email format",
+      "emailDomain": "Email must include domain (e.g. .com)",
+      "messageRequired": "Message is required",
+      "messageMin": "Minimum 10 characters"
+    }
+  },
+  "footer": {
+    "developer": "Developer: Liudmyla Karmeliuk",
+    "email": "Email",
+    "resume": "Resume",
+    "copyright": "All rights reserved."
+  }
+}

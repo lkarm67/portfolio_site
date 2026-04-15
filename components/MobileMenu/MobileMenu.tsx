@@ -3,6 +3,19 @@
 import css from "./MobileMenu.module.css";
 import { useEffect } from "react";
 import Image from "next/image"; 
+import { useLanguage } from "@/context/LanguageContext";
+
+import en from "../../locales/en.json";
+import uk from "../../locales/uk.json";
+
+type Translations = {
+  nav: {
+    home: string;
+    about: string;
+    projects: string;
+    contact: string;
+  };
+};
 
 type Props = {
   isOpen: boolean;
@@ -10,12 +23,16 @@ type Props = {
 };
 
 export default function MobileMenu({ isOpen, onClose }: Props) {
+  const { lang } = useLanguage();
+  const t = lang === "en" ? en : uk;
+
   useEffect(() => {
   const handleEsc = (e: KeyboardEvent) => {
-    if (e.key === "Escape") onClose();
-  };
+      if (e.key === "Escape") onClose();
+    };
 
-  if (isOpen) {
+    if (!isOpen) return;
+
     window.addEventListener("keydown", handleEsc);
 
     const scrollY = window.scrollY;
@@ -26,21 +43,18 @@ export default function MobileMenu({ isOpen, onClose }: Props) {
     document.body.classList.add("noScroll");
 
     (document.body as any).dataset.scrollY = scrollY.toString();
-  } else {
-    window.removeEventListener("keydown", handleEsc);
-
-    const scrollY = (document.body as any).dataset.scrollY;
-
-    document.body.style.position = "";
-    document.body.style.top = "";
-    document.body.style.width = "";
-    document.body.classList.remove("noScroll");
-
-    if (scrollY) window.scrollTo(0, parseInt(scrollY));
-  }
 
     return () => {
       window.removeEventListener("keydown", handleEsc);
+
+      const savedScrollY = (document.body as any).dataset.scrollY;
+
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.width = "";
+      document.body.classList.remove("noScroll");
+
+      if (savedScrollY) window.scrollTo(0, parseInt(savedScrollY));
     };
   }, [isOpen, onClose]);
 
@@ -92,10 +106,10 @@ export default function MobileMenu({ isOpen, onClose }: Props) {
           />
 
           <nav className={css.mobileNav}>
-            <button onClick={() => handleScroll("home")}>Home</button>
-            <button onClick={() => handleScroll("about")}>About</button>
-            <button onClick={() => handleScroll("projects")}>Projects</button>
-            <button onClick={() => handleScroll("contact")}>Contact</button>
+            <button onClick={() => handleScroll("home")}>{t.nav.home}</button>
+            <button onClick={() => handleScroll("about")}>{t.nav.about}</button>
+            <button onClick={() => handleScroll("projects")}>{t.nav.projects}</button>
+            <button onClick={() => handleScroll("contact")}>{t.nav.contact}</button>
           </nav>
 
         </div>

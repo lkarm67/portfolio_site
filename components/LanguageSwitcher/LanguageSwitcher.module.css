@@ -1,0 +1,36 @@
+.langButtons {
+  display: flex;
+  gap: 6px;
+  padding: 4px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+}
+
+/* кнопки */
+.button {
+  border: none;
+  background: transparent;
+  color: #ffffff80;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+/* hover */
+.button:hover {
+  color: white;
+}
+
+/* активна */
+.active {
+  background: linear-gradient(135deg, #6f2d80, #d66ec3);
+  color: white;
+  box-shadow: 0 0 12px rgba(255, 78, 205, 0.6);
+}
+
+.button:active {
+  transform: scale(0.95);
+}
