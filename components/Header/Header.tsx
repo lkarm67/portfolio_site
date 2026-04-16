@@ -54,16 +54,18 @@ export default function Header() {
         />
       </div>
 
-      {/* NAV */}
-      <nav className={css.nav}>
-        <a href="#home">{t.nav.home}</a>
-        <a href="#about">{t.nav.about}</a>
-        <a href="#projects">{t.nav.projects}</a>
-        <a href="#contact">{t.nav.contact}</a>
-      </nav>
+      <div className={css.navLangBox}> 
+        {/* NAV */}
+        <nav className={css.nav}>
+          <a href="#home">{t.nav.home}</a>
+          <a href="#about">{t.nav.about}</a>
+          <a href="#projects">{t.nav.projects}</a>
+          <a href="#contact">{t.nav.contact}</a>
+        </nav>
 
-      {/* LANGUAGE SWITCHER */}
-      <LanguageSwitcher lang={lang} setLang={setLang} />
+        {/* LANGUAGE SWITCHER */}
+        <LanguageSwitcher lang={lang} setLang={setLang} />
+      </div>
 
       {/* BURGER */}
       <button

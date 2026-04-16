@@ -31,6 +31,12 @@
   height: auto;
 }
 
+.navLangBox{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
 .nav {
   display: flex;
   gap: 24px;
@@ -41,7 +47,7 @@
 }
 
 .burgerBtn {
-  font-size: 26px;
+  font-size: 28px;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -59,17 +65,6 @@
     padding: 0 40px;
     border-radius: 54px;
   }
-
-  .logoMobile {
-    display: none;
-  }
-
-  .logoDesktop {
-    display: block;
-    width: 350px;
-    height: auto;
-  }
-
   .nav {
     display: flex;
     gap: 20px;
@@ -93,7 +88,13 @@
 }
 
 @media (min-width: 1024px) {
+  .logoMobile {
+    display: none;
+  }
+
   .logoDesktop {
+    display: block;
+    height: auto;
     width: 400px;
   }
   

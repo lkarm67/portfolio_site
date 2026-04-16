@@ -7,22 +7,21 @@
   },
   "home": {
     "tag": "Frontend / Fullstack Developer",
-    "titlePart1": "Створюю сучасні",
-    "titleHighlight": "сайти та додатки",
-    "subtitle": "Я будую чисті, швидкі та естетичні інтерфейси з використанням React та Next.js.",
+    "titlePart1": "Створи привабливе",
+    "titleHighlight": "обличчя для свого бізнесу",
+    "subtitle": "Я будую чисті, швидкі та естетичні сайти з використанням React та Next.js.",
     "primaryBtn": "Резюме",
-    "secondaryBtn": "Зв'язатися зі мною"
+    "secondaryBtn": "Зв'яжіться зі мною"
   },
   "about": {
     "title": "Про мене",
-    "nameIntro": "Я -",
     "name": "Людмила Кармелюк",
-    "role": "frontend / fullstack розробник.",
+    "role": "<Frontend / Fullstack розробник>",
     "description": "Я створюю сучасні та зручні веб-інтерфейси.",
-    "frontendLabel": "Frontend:",
+    "frontendLabel": "Frontend",
     "frontendStack": "HTML5, CSS3, JavaScript, React, Next.js, TypeScript",
-    "fullstackLabel": "Fullstack:",
-    "fullstackStack": "Node.js, Express.js, MongoDB, Firebase, REST API",
+    "backendLabel": "Backend",
+    "backendStack": "Node.js, Express.js, MongoDB, Firebase, REST API",
     "extra": "Я люблю чистий UI, плавні анімації та проєкти, які виглядають живими та преміальними.",
     "skills": {
       "1": "Розв'язання проблем",
@@ -75,9 +74,9 @@
     }, 
   
   "footer": {
-     "developer": "Розробниця: Людмила Кармелюк",
-    "email": "Пошта",
-    "resume": "Резюме",
-    "copyright": "Усі права захищені."
+     "developer": "Розробник: Людмила Кармелюк",
+     "email": "Пошта",
+     "resume": "Резюме",
+     "copyright": "Всі права захищені."
   }
 } 

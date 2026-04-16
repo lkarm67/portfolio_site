@@ -6,29 +6,13 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import css from "./Contact.module.css";
+import { useLanguage } from "@/context/LanguageContext";
+import en from "../../locales/en.json";
+import uk from "../../locales/uk.json";
 
-// ===== SCHEMA =====
-const schema = yup.object({
-  name: yup
-    .string()
-    .min(2, "Minimum 2 characters")
-    .required("Name is required"),
+type LocaleType = typeof en;
 
-  email: yup
-    .string()
-    .email("Invalid email format")
-    .matches(
-      /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/,
-      "Email must include domain (e.g. .com)"
-    )
-    .required("Email is required"),
-
-  message: yup
-    .string()
-    .min(10, "Minimum 10 characters")
-    .required("Message is required"),
-});
-
+// ===== FORM DATA =====
 type FormData = {
   name: string;
   email: string;
@@ -36,6 +20,31 @@ type FormData = {
 };
 
 export default function Contact() {
+  const { lang } = useLanguage();
+  const t: LocaleType = lang === "uk" ? uk : en;
+
+  // ===== SCHEMA =====
+  const schema = yup.object({
+    name: yup
+      .string()
+      .min(2, t.contact.errors.nameMin)
+      .required(t.contact.errors.nameRequired),
+
+    email: yup
+      .string()
+      .email(t.contact.errors.emailInvalid)
+      .matches(
+        /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/,
+        t.contact.errors.emailDomain
+      )
+      .required(t.contact.errors.emailRequired),
+
+    message: yup
+      .string()
+      .min(10, t.contact.errors.messageMin)
+      .required(t.contact.errors.messageRequired),
+  });
+
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
 
@@ -43,7 +52,7 @@ export default function Contact() {
     register,
     handleSubmit,
     reset,
-    formState: { errors, isValid, isSubmitSuccessful },
+    formState: { errors, isValid },
   } = useForm<FormData>({
     resolver: yupResolver(schema),
     mode: "onChange",
@@ -70,7 +79,6 @@ export default function Contact() {
       setTimeout(() => {
         setSuccess(false);
       }, 3000);
-
     } catch (err) {
       alert("Something went wrong 😢");
     } finally {
@@ -87,19 +95,14 @@ export default function Contact() {
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        <h2 className={css.title}>Contact Me</h2>
+        <h2 className={css.title}>{t.contact.title}</h2>
 
         <div className={css.parWrapper}>
-          <p className={css.subtitle}>
-            Have a project or question?
-          </p>
-          <p className={css.subtitle}>
-            Let&apos;s talk and create something amazing together!
-          </p>
+          <p className={css.subtitle}>{t.contact.subtitle1}</p>
+          <p className={css.subtitle}>{t.contact.subtitle2}</p>
         </div>
 
         <form onSubmit={handleSubmit(onSubmit)} className={css.form}>
-          
           {/* NAME */}
           <div className={css.inputGroup}>
             <input
@@ -107,7 +110,7 @@ export default function Contact() {
               placeholder=" "
               className={errors.name ? css.inputError : ""}
             />
-            <label>Name</label>
+            <label>{t.contact.form.name}</label>
             {errors.name && (
               <span className={css.error}>{errors.name.message}</span>
             )}
@@ -120,7 +123,7 @@ export default function Contact() {
               placeholder=" "
               className={errors.email ? css.inputError : ""}
             />
-            <label>Email</label>
+            <label>{t.contact.form.email}</label>
             {errors.email && (
               <span className={css.error}>{errors.email.message}</span>
             )}
@@ -134,7 +137,7 @@ export default function Contact() {
               placeholder=" "
               className={errors.message ? css.inputError : ""}
             />
-            <label>Message</label>
+            <label>{t.contact.form.message}</label>
             {errors.message && (
               <span className={css.error}>{errors.message.message}</span>
             )}
@@ -145,12 +148,14 @@ export default function Contact() {
             disabled={!isValid || loading}
             className={css.button}
           >
-            {loading ? "Sending..." : "Send Message"}
+            {loading
+              ? t.contact.form.button.sending
+              : t.contact.form.button.send}
           </button>
         </form>
 
         {success && (
-          <p className={css.success}>Message sent 🚀</p>
+          <p className={css.success}>{t.contact.form.success}</p>
         )}
       </motion.div>
     </section>

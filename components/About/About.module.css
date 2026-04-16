@@ -14,7 +14,7 @@
 .aboutCard {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px;
   color: #ffe6f0;
 }
 
@@ -35,10 +35,17 @@
   -webkit-text-fill-color: transparent;
 }
 
+
+
 .aboutCard p {
   font-size: 14px;
   line-height: 1.5;
   color: rgba(255, 230, 240, 0.75);
+}
+
+.role{
+  color: #ffe6f0;
+  font-size: 38px;
 }
 
 .tech {

@@ -15,11 +15,10 @@ export default function About() {
       <div className={css.aboutCard}>
         
         <h2>{t.about.title}</h2>
-
-        <h3>
-          {t.about.nameIntro}{" "}
-          <span className={css.name}>{t.about.name}</span> - {t.about.role}
-        </h3>
+        <div>
+          <h3 className={css.name}>{t.about.name}</h3>
+          <h3 className={css.role}>{t.about.role}</h3>
+        </div>
         
         <p>{t.about.description}</p>
         <p>
@@ -27,8 +26,8 @@ export default function About() {
           {t.about.frontendStack}
         </p>
         <p>
-          <span className={css.tech}>{t.about.fullstackLabel}: </span>
-          {t.about.fullstackStack}
+          <span className={css.tech}>{t.about.backendLabel}: </span>
+          {t.about.backendStack}
         </p>
         <p>
           {t.about.extra}

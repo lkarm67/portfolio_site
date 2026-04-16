@@ -7,22 +7,21 @@
   },
   "home": {
     "tag": "Frontend / Fullstack Developer",
-    "titlePart1": "Creating modern",
-    "titleHighlight": "web experiences",
+    "titlePart1": "Create an attractive ",
+    "titleHighlight": "face for your business",
     "subtitle": "I build clean, fast and aesthetic interfaces with React & Next.js.",
     "primaryBtn": "View Resume",
     "secondaryBtn": "Contact Me"
   },
   "about": {
     "title": "About Me",
-    "nameIntro": "I'm",
     "name": "Liudmyla Karmeliuk",
-    "role": "a frontend / fullstack developer.",
+    "role": "<Frontend / Fullstack Developer>",
     "description": "I create modern and user-friendly web interfaces.",
     "frontendLabel": "Frontend:",
     "frontendStack": "HTML5, CSS3, JavaScript, React, Next.js, TypeScript",
-    "fullstackLabel": "Fullstack:",
-    "fullstackStack": "Node.js, Express.js, MongoDB, Firebase, RESTful APIs",
+    "backendLabel": "Backend:",
+    "backendStack": "Node.js, Express.js, MongoDB, Firebase, RESTful APIs",
     "extra": "I love clean UI, smooth animations and building projects that feel alive and premium.",
     "skills": {
       "1": "Problem-solving",
