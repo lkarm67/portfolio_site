@@ -6,11 +6,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import css from "./Contact.module.css";
-import { useLanguage } from "@/context/LanguageContext";
-import en from "../../locales/en.json";
-import uk from "../../locales/uk.json";
-
-type LocaleType = typeof en;
+import useT from "@/hooks/useT";
 
 // ===== FORM DATA =====
 type FormData = {
@@ -20,9 +16,7 @@ type FormData = {
 };
 
 export default function Contact() {
-  const { lang } = useLanguage();
-  const t: LocaleType = lang === "uk" ? uk : en;
-
+  const t = useT();
   // ===== SCHEMA =====
   const schema = yup.object({
     name: yup

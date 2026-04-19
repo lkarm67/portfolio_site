@@ -1,16 +1,10 @@
 "use client";
 
 import css from "./LanguageSwitcher.module.css";
+import { useLanguage } from "@/context/LanguageContext";
 
-type Lang = "en" | "uk";
-
-type Props = {
-  lang: Lang;
-  setLang: (lang: Lang) => void;
-};
-
-export default function LanguageSwitcher({ lang, setLang }: Props) {
-  return (
+export default function LanguageSwitcher() {
+  const { lang, setLang } = useLanguage();return (
     <div className={css.langButtons}>
       <button
         className={`${css.button} ${lang === "en" ? css.active : ""}`}

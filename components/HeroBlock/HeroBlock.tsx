@@ -3,13 +3,10 @@
 import Link from "next/link";
 import css from "./HeroBlock.module.css";
 import { motion } from "framer-motion";
-import en from "../../locales/en.json";
-import uk from "../../locales/uk.json";
-import { useLanguage } from "@/context/LanguageContext";
+import useT from "@/hooks/useT";
 
 export default function HeroBlock() {
-  const { lang } = useLanguage();
-  const t = lang === "en" ? en : uk;
+  const t = useT();
 
   return (
     <section id="home" className={css.hero}>

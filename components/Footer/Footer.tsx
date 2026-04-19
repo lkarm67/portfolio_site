@@ -2,15 +2,12 @@
 
 import { motion } from "framer-motion";
 import css from "./Footer.module.css";
-import { useLanguage } from "@/context/LanguageContext";
-import en from "../../locales/en.json";
-import uk from "../../locales/uk.json";
+import useT from "@/hooks/useT";
 
 
 export default function Footer() {
   const year = new Date().getFullYear();
-  const { lang } = useLanguage();
-  const t = lang === "en" ? en : uk;
+  const t = useT();
 
   return (
     <footer className={css.footer}>
@@ -46,8 +43,8 @@ export default function Footer() {
            
         <p className={css.text}>
           {t.footer.developer} | 
-            <a href="mailto:fsdkl04@gmail.com"> {t.footer.email}</a> | 
-            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer"> {t.footer.resume}</a>
+            <a className={css.fA} href="mailto:fsdkl04@gmail.com"> {t.footer.email}</a> | 
+            <a className={css.fA} href="/resume.pdf" target="_blank" rel="noopener noreferrer"> {t.footer.resume}</a>
         </p>
 
         <p className={css.copy}>© {year} {t.footer.copyright}</p>

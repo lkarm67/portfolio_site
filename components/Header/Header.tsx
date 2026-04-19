@@ -1,3 +1,4 @@
+
 "use client";
 
 import css from "./Header.module.css";
@@ -5,35 +6,27 @@ import Image from "next/image";
 import { useState } from "react";
 import MobileMenu from "../MobileMenu/MobileMenu";
 import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
-import { useLanguage } from "@/context/LanguageContext";
+/*import { useLanguage } from "@/context/LanguageContext";
 
 import en from "../../locales/en.json";
-import uk from "../../locales/uk.json";
-
-type Translations = {
-  nav: {
-    home: string;
-    about: string;
-    projects: string;
-    contact: string;
-  };
-};
+import uk from "../../locales/uk.json";*/
+import useT from "@/hooks/useT";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const { lang, setLang } = useLanguage();
+  const t = useT();
+  /*const { lang, setLang } = useLanguage();
 
   const translations: Record<"en" | "uk", Translations> = {
     en,
     uk,
   };
 
-  const t = translations[lang];
+  const t = translations[lang];*/
 
   return (
     <header className={css.header}>
-      {/* LOGO */}
+      {/* LOGO  */}
       <div className={css.logo}>
         <Image
           src="/images/logo_header.png"
@@ -55,7 +48,7 @@ export default function Header() {
       </div>
 
       <div className={css.navLangBox}> 
-        {/* NAV */}
+        {/* NAV  */}
         <nav className={css.nav}>
           <a href="#home">{t.nav.home}</a>
           <a href="#about">{t.nav.about}</a>
@@ -63,11 +56,11 @@ export default function Header() {
           <a href="#contact">{t.nav.contact}</a>
         </nav>
 
-        {/* LANGUAGE SWITCHER */}
-        <LanguageSwitcher lang={lang} setLang={setLang} />
+        {/* LANGUAGE SWITCHER  */}
+        <LanguageSwitcher />
       </div>
 
-      {/* BURGER */}
+      {/* BURGER  */}
       <button
         className={css.burgerBtn}
         onClick={() => setIsMenuOpen(true)}

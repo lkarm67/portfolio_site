@@ -2,13 +2,10 @@
 
 import Image from "next/image";
 import css from "./About.module.css";
-import en from "../../locales/en.json";
-import uk from "../../locales/uk.json";
-import { useLanguage } from "@/context/LanguageContext";
+import useT from "@/hooks/useT";
 
 export default function About() {
-  const { lang } = useLanguage();
-  const t = lang === "en" ? en : uk;
+  const t = useT();
 
   return (
     <section id="about" className={css.about}>

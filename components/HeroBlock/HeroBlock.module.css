@@ -78,6 +78,7 @@
   border: none;
   background: linear-gradient(135deg, #6f2d80, #d66ec3);
   color: #ffe6f0;
+  text-decoration: none;
 }
 
 .icon {
