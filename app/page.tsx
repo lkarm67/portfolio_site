@@ -6,7 +6,7 @@ import HeroBlock from "@/components/HeroBlock/HeroBlock";
 import Projects from "@/components/Projects/Projects";
 import Skills from "@/components/Skills/Skills";
 
-const Home = () => {
+export default function Home() {
   return (
     <>
       <main>
@@ -21,4 +21,3 @@ const Home = () => {
     </>
   ) 
 }
-export default Home;
