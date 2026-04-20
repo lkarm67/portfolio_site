@@ -1,10 +1,12 @@
-import About from "@/components/About/About";
-import Contact from "@/components/Contact/Contact";
-import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
 import HeroBlock from "@/components/HeroBlock/HeroBlock";
-import Projects from "@/components/Projects/Projects";
-import Skills from "@/components/Skills/Skills";
+import dynamic from "next/dynamic";
+
+const About = dynamic(() => import("@/components/About/About"));
+const Skills = dynamic(() => import("@/components/Skills/Skills"));
+const Projects = dynamic(() => import("@/components/Projects/Projects"));
+const Contact = dynamic(() => import("@/components/Contact/Contact"));
+const Footer = dynamic(() => import("@/components/Footer/Footer"));
 
 export default function Home() {
   return (
@@ -19,5 +21,5 @@ export default function Home() {
         <Footer />
       </main>
     </>
-  ) 
+  );
 }

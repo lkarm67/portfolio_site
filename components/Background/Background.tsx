@@ -114,6 +114,7 @@ export default function Background() {
         inset: 0,
         zIndex: 0,
         pointerEvents: "none",
+        filter: "blur(0.3px)",
       }}
     />
   );
