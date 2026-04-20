@@ -21,7 +21,7 @@ const projects: Project[] = [
   {
     key: "nanny",
     title: "Nanny.Services",
-    img: "/projects/nanny.png",
+    img: "/projects/nanny.jpg",
     tech: [
       "React",
       "TypeScript",
@@ -44,7 +44,7 @@ const projects: Project[] = [
   {
     key: "traveltrucks",
     title: "TravelTrucks",
-    img: "/projects/camper.png",
+    img: "/projects/camper.jpg",
     tech: [
       "Next.js",
       "React",
@@ -68,7 +68,7 @@ const projects: Project[] = [
   {
     key: "toolnext",
     title: "ToolNext",
-    img: "/projects/toolnext.png",
+    img: "/projects/toolnext.jpg",
     tech: [
       "Next.js",
       "React",
@@ -101,7 +101,7 @@ const projects: Project[] = [
   {
     key: "notehub",
     title: "NoteHub",
-    img: "/projects/notehub.png",
+    img: "/projects/notehub.jpg",
     tech: ["Next.js", "React", "JavaScript", "HTML5", "CSS3", "Vite", "Vercel", "GitHub"],
     role: "Frontend Developer",
     type: "individual",
@@ -111,7 +111,7 @@ const projects: Project[] = [
   {
     key: "mebleria",
     title: "Меблерія",
-    img: "/projects/furniture.png",
+    img: "/projects/furniture.jpg",
     tech: [
       "HTML5",
       "CSS3",
@@ -132,7 +132,7 @@ const projects: Project[] = [
   {
     key: "webstudio",
     title: "WebStudio",
-    img: "/projects/webstudio.png",
+    img: "/projects/webstudio.jpg",
     tech: ["HTML5", "CSS3", "JavaScript", "GitHub Pages"],
     role: "Frontend Developer",
     type: "individual",
@@ -142,7 +142,7 @@ const projects: Project[] = [
   {
     key: "watchcharm",
     title: "WatchCharm",
-    img: "/projects/watchcharm.png",
+    img: "/projects/watchcharm.jpg",
     tech: ["HTML5", "CSS3", "JavaScript", "GitHub Pages"],
     role: "Frontend Developer",
     type: "team",
