@@ -42,8 +42,9 @@ export default function About() {
         <Image 
           src="/images/about.jpg"
           alt="About me"
-          width={300}
-          height={380}
+          width={881}
+          height={1143}
+          sizes="(max-width:768px) 260px, 300px"
           className={css.imgAbout}
         />
       </div>

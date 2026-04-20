@@ -173,7 +173,6 @@
 
   .title {
     font-size: 36px;
-    margin-bottom: 30px;
   }
 
   .subtitle {
@@ -197,12 +196,11 @@
 
 @media (min-width: 1280px) {
   .contactSection {
-    padding: 110px 40px;
+    padding: 90px 40px 60px 40px;
   }
 
   .title {
     font-size: 44px;
-    margin-bottom: 40px;
   }
 
   .subtitle {
