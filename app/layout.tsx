@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     siteName: "Portfolio",
     images: [
       {
-        url: "https://res.cloudinary.com/dvrha1ntw/image/upload/v1776700316/portfolio_og_oge5tq.jpg",
+        url: "https://res.cloudinary.com/dvrha1ntw/image/upload/v1776783955/portfolio_og_jzpz1p.jpg",
         width: 1200,
         height: 630,
       },
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     title: "Liudmyla Karmeliuk | Fullstack Developer",
     description: "Fullstack developer specializing in modern web applications using React, Next.js, and scalable technologies. View my projects and experience.",
     images: [
-      "https://res.cloudinary.com/dvrha1ntw/image/upload/v1776700316/portfolio_og_oge5tq.jpg",
+      "https://res.cloudinary.com/dvrha1ntw/image/upload/v1776783955/portfolio_og_jzpz1p.jpg",
     ],
   },
 };
