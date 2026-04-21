@@ -6,7 +6,7 @@
     "contact": "Contact"
   },
   "home": {
-    "tag": "Frontend / Fullstack Developer",
+    "tag": "Fullstack Developer",
     "titlePart1": "Create an attractive ",
     "titleHighlight": "face for your business",
     "subtitle": "I build clean, fast and aesthetic interfaces with React & Next.js.",
@@ -16,7 +16,7 @@
   "about": {
     "title": "About Me",
     "name": "Liudmyla Karmeliuk",
-    "role": "<Frontend / Fullstack Developer>",
+    "role": "<Fullstack Developer>",
     "description": "I create modern and user-friendly web interfaces.",
     "frontendLabel": "Frontend:",
     "frontendStack": "HTML5, CSS3, JavaScript, React, Next.js, TypeScript",
@@ -41,7 +41,7 @@
     "items": {
       "nanny": "SPA for finding and booking babysitters with authentication and scheduling.",
       "traveltrucks": "Camper rental platform with catalog, filtering, booking and reviews.",
-      "toolnext": "Full-stack platform for renting and booking tools with authentication and reviews.",
+      "toolnext": "Fullstack platform for renting and booking tools with authentication and reviews.",
       "notehub": "Simple and clean app for managing personal notes.",
       "mebleria": "Responsive furniture store website with product catalog and pagination.",
       "webstudio": "Responsive business website with modern layout and interactive elements.",
