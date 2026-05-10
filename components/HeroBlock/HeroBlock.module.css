@@ -192,3 +192,29 @@
   100% { transform: translateY(0px); }
 }
 
+@media (max-width: 767px) {
+  .hero h1 span {
+    display: inline-block;
+
+    background: linear-gradient(135deg, #e879f9, #ffb3d1);
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    -webkit-font-smoothing: antialiased;
+
+    transform: translateZ(0);
+  }
+
+  .primary {
+    background: linear-gradient(135deg, #b45cff, #ff8ecf);
+
+    transform: translateZ(0);
+  }
+
+  .glow {
+    filter: blur(30px);
+    opacity: 0.5;
+  }
+}
