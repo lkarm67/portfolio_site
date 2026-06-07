@@ -8,8 +8,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  /*padding: 0 40px;*/
   padding: 0 40px;
 
   background: rgba(20, 5, 15, 1.0); 

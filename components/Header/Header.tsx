@@ -6,24 +6,12 @@ import Image from "next/image";
 import { useState } from "react";
 import MobileMenu from "../MobileMenu/MobileMenu";
 import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
-/*import { useLanguage } from "@/context/LanguageContext";
-
-import en from "../../locales/en.json";
-import uk from "../../locales/uk.json";*/
 import useT from "@/hooks/useT";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const t = useT();
-  /*const { lang, setLang } = useLanguage();
-
-  const translations: Record<"en" | "uk", Translations> = {
-    en,
-    uk,
-  };
-
-  const t = translations[lang];*/
-
+  
   return (
     <header className={css.header}>
       {/* LOGO  */}
