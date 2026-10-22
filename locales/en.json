@@ -39,6 +39,7 @@
     "live": "Live",
     "github": "GitHub",
     "items": {
+      "warmtouch": "Commercial website for a stove and fireplace craftsman, featuring a responsive design, order form, and notifications via Telegram and email.",
       "nanny": "SPA for finding and booking babysitters with authentication and scheduling.",
       "traveltrucks": "Camper rental platform with catalog, filtering, booking and reviews.",
       "toolnext": "Fullstack platform for renting and booking tools with authentication and reviews.",

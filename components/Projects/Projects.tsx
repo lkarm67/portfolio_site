@@ -19,6 +19,27 @@ type Project = {
 
 const projects: Project[] = [
   {
+    key: "warmtouch",
+    title: "Теплий Дотик",
+    img: "/projects/warmtouch.jpg",
+    tech: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "CSS Modules",
+      "Resend",
+      "Telegram Bot API",
+      "REST API",
+      "HTML5",
+      "CSS3",
+      "Vercel",
+    ],
+    role: "Fullstack Developer",
+    type: "individual",
+    live: "https://warmtouch.vercel.app/",
+    github: "https://github.com/lkarm67/warmtouch",
+  },
+  {
     key: "nanny",
     title: "Nanny.Services",
     img: "/projects/nanny.jpg",

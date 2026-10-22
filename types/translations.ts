@@ -1,4 +1,5 @@
 export type ProjectKey =
+  | "warmtouch"
   | "nanny"
   | "traveltrucks"
   | "toolnext"
