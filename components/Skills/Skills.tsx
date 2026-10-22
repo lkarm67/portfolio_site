@@ -1,7 +1,7 @@
 "use client";
 
 import css from "./Skills.module.css";
-import { TbApi } from "react-icons/tb";
+import { TbApi, TbBrandTelegram } from "react-icons/tb";
 
 import {
   SiHtml5,
@@ -23,12 +23,15 @@ import {
   SiVercel,
   SiNetlify,
   SiRender,
+  SiCssmodules,
+  SiResend,
   SiOpenai,
 } from "react-icons/si";
 
 const skills = [
   { name: "HTML", icon: SiHtml5 },
   { name: "CSS", icon: SiCss },
+  { name: "CSS Modules", icon: SiCssmodules },
   { name: "JavaScript", icon: SiJavascript },
   { name: "TypeScript", icon: SiTypescript },
   { name: "React", icon: SiReact },
@@ -40,6 +43,8 @@ const skills = [
   { name: "Express.js", icon: SiExpress },
   { name: "MongoDB", icon: SiMongodb },
   { name: "Firebase", icon: SiFirebase },
+  { name: "Resend", icon: SiResend },
+  { name: "Telegram Bot API", icon: TbBrandTelegram },
   { name: "Figma", icon: SiFigma },
   { name: "Canva", icon: SiCanva },
   { name: "Slack", icon: SiSlack },
